@@ -11,6 +11,7 @@ export default function SwitchToggle({isActive, onSwitch}) {
             {menus.map(item => {
                 return (
                     <span 
+                        key={item.key}
                         onClick={() => onSwitch(item.key)}
                         className={`px-5 py-1 rounded-full cursor-pointer ${isActive === item.key ? "bg-blue-500 text-white" : "hover:bg-blue-50"}`}
                     >
