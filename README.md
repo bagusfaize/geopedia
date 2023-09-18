@@ -1,6 +1,6 @@
 # About The Project
 ## Geopedia
-Web application for viewing mining data
+Web application for viewing mining data.
 
 ## Built with
 This application built with NextJS use these tech stack :
@@ -18,7 +18,7 @@ This application built with NextJS use these tech stack :
 Make sure you have Node JS installed on your PC.
 1. Clone this repository by copy and run to your Terminal
 ```bash
-git clone [https://github.com/bagusfaize/github-explorer.git](https://github.com/bagusfaize/geopedia.git)
+git clone https://github.com/bagusfaize/geopedia.git
 ```
 2. Go to the project folder
 ```bash
