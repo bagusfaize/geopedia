@@ -5,11 +5,12 @@ import SwitchToggle from '../components/SwitchToggle'
 import DataTable from './components/DataTable'
 import GraphView from './components/GraphView'
 import { useActiveContent } from '../hooks/useActiveContent'
+import { useMiningData } from '../hooks/useMiningData'
 
 export default function Dashboard() {
+    const {data, isLoading} = useMiningData();
     const { isActive, onSwitch, isTableView } = useActiveContent()
 
-    // console.log('clg outside', isActive);
 
     return (
         <AdminLayout>
@@ -19,9 +20,9 @@ export default function Dashboard() {
             </div>
             <div className="container">
                 {isTableView ?
-                    <DataTable />
+                    <DataTable data={data} isLoading={isLoading}/>
                     :
-                    <GraphView />
+                    <GraphView data={data} isLoading={isLoading}/>
                 }
             </div>
         </AdminLayout>

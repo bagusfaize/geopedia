@@ -2,8 +2,8 @@ import React from 'react'
 import { Table } from 'antd'
 import { useMiningData } from '@/app/hooks/useMiningData';
 
-export default function DataTable() {
-    const {data, isLoading} = useMiningData()
+export default function DataTable({data, isLoading}) {
+    
     const yearFilter = [...new Set(data?.map(item => item.tahun))]?.map(item => ({text:item, value:item}));
     const mineralTypeFilter = [...new Set(data?.map(item => item.jenis_bahan_galian))]?.map(item => ({text:item, value:item}))
 
