@@ -14,6 +14,10 @@ This application built with NextJS use these tech stack :
   <li>Antd</li>
 </ul>
 
+## Demo page
+View demo page on Vercel here [https://geopedia-tan.vercel.app/](https://geopedia-tan.vercel.app/)
+
+
 ## How to Run Project
 Make sure you have Node JS installed on your PC.
 1. Clone this repository by copy and run to your Terminal
