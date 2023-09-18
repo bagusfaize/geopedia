@@ -1,3 +1,4 @@
+import { useChartDataFormatter } from '@/app/hooks/useChartDataFormatter';
 import React from 'react'
 import {
     BarChart,
@@ -55,14 +56,9 @@ const dummy = [
 ];
 
 export default function GraphView({data, isLoading}) {
-    const chartData = data?.map(item => {
-        return {
-            name: item.jenis_bahan_galian,
-            tahun: item.jumlah_produksi,
+    const { result: chartData } = useChartDataFormatter({data})
 
-        }
-    })
-    console.log('clg data', data);
+    // console.log('clg data', chartData);
     return (
         <div>
             <BarChart
@@ -81,8 +77,10 @@ export default function GraphView({data, isLoading}) {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="tahun" fill="#8884d8" />
-                {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
+                <Bar dataKey="2014" fill="#071952" />
+                <Bar dataKey="2015" fill="#088395" />
+                <Bar dataKey="2016" fill="#793FDF" />
+                <Bar dataKey="2017" fill="#F39F5A" />
             </BarChart>
         </div>
     )
