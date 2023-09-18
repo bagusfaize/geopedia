@@ -7,7 +7,7 @@ const menus = [
 
 export default function SwitchToggle({isActive, onSwitch}) {
     return (
-        <div className="flex justify-between p-2 bg-white shadow rounded-full space-x-2">
+        <div className="flex justify-between p-2 bg-white shadow rounded-full space-x-2 items-center">
             {menus.map(item => {
                 return (
                     <span 

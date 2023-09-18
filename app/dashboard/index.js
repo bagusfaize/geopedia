@@ -13,11 +13,11 @@ export default function Dashboard() {
 
     return (
         <div>
-            <div className="mb-10 flex justify-between">
-                <h1 className="text-2xl font-semibold">West Java Mining Data</h1>
+            <div className="mb-10 flex justify-between flex-col sm:flex-row">
+                <h1 className="text-2xl font-semibold mb-7 sm:mb-0 text-center">West Java Mining Data</h1>
                 <SwitchToggle isActive={isActive} onSwitch={onSwitch}/>
             </div>
-            <div className="container">
+            <div className="container overflow-x-auto">
                 {isTableView ?
                     <DataTable data={data} isLoading={isLoading}/>
                     :
