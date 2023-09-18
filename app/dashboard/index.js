@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import AdminLayout from '../layouts/Admin'
 import SwitchToggle from '../components/SwitchToggle'
 import DataTable from './components/DataTable'
 import GraphView from './components/GraphView'
@@ -13,7 +12,7 @@ export default function Dashboard() {
 
 
     return (
-        <AdminLayout>
+        <div>
             <div className="mb-10 flex justify-between">
                 <h1 className="text-2xl font-semibold">West Java Mining Data</h1>
                 <SwitchToggle isActive={isActive} onSwitch={onSwitch}/>
@@ -25,6 +24,6 @@ export default function Dashboard() {
                     <GraphView data={data} isLoading={isLoading}/>
                 }
             </div>
-        </AdminLayout>
+        </div>
     )
 }
